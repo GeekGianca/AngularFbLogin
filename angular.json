@@ -23,9 +23,32 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/font-awesome/css/font-awesome.min.css",
+              "src/assets/js/plugins/owl-carousel/owl.carousel.css",
+              "src/assets/js/plugins/owl-carousel/owl.transitions.css",
+              "src/assets/js/plugins/owl-carousel/owl.theme.css",
+              "src/assets/js/plugins/magnific-popup/magnific-popup.css",
+              "src/assets/js/plugins/datepicker/datepicker.css",
+              "src/assets/css/style.css",
+              "src/assets/css/responsive.css"
+              /*"node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/font-awesome/css/font-awesome.min.css"*/
             ],
-            "scripts": []
+            "scripts": [
+              /*"node_modules/jquery/dist/jquery.slim.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"*/
+              "src/assets/js/jquery-3.3.1.min.js",
+              "src/assets/js/popper.min.js",
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/plugins/bootstrap-filestyle/bootstrap-filestyle.min.js",
+              "src/assets/js/plugins/datepicker/bootstrap-datepicker.js",
+              "src/assets/js/plugins/owl-carousel/owl.carousel.js",
+              "src/assets/js/plugins/magnific-popup/jquery.magnific-popup.min.js",
+              "src/assets/js/custom.js"
+            ]
           },
           "configurations": {
             "production": {
