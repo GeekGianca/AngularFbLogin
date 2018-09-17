@@ -11,6 +11,24 @@ import { FoodgridComponent } from './foodgrid/foodgrid.component';
 import { FooddetailComponent } from './fooddetail/fooddetail.component';
 import { TermsComponent } from './terms/terms.component';
 import { PolicyComponent } from './policy/policy.component';
+import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider } from "angular-6-social-login";
+
+// Configs 
+export function getAuthServiceConfigs() {
+  let config = new AuthServiceConfig(
+      [
+        {
+          id: FacebookLoginProvider.PROVIDER_ID,
+          provider: new FacebookLoginProvider("889232561274177")
+        },
+        {
+          id: GoogleLoginProvider.PROVIDER_ID,
+          provider: new GoogleLoginProvider("479048571790-uq0puabde3o6upvc7src3veoni5plmnl.apps.googleusercontent.com")
+        }
+      ]
+  );
+  return config;
+}
 
 @NgModule({
   declarations: [
@@ -27,9 +45,18 @@ import { PolicyComponent } from './policy/policy.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SocialLoginModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: AuthServiceConfig,
+      useFactory: getAuthServiceConfigs
+    }
+  ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
+
+
